@@ -7,12 +7,15 @@ public class CanonCtrl : MonoBehaviour
     public float RestAngle = 9f;
     public float Angle;
     private float mAngle;
+    public OrbFactory orbFactory;
 
     public GameObject gun;
 
     // Start is called before the first frame update
     void Start()
     {
+        mAngle = Angle;
+        orbFactory.LaunchAngle = mAngle;
         UpdateCanonOnScreen();
     }
 
@@ -22,6 +25,7 @@ public class CanonCtrl : MonoBehaviour
         if (Angle != mAngle)
         {
             mAngle = Angle;
+            orbFactory.LaunchAngle = mAngle;
             UpdateCanonOnScreen();
         }
     }
