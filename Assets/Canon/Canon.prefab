@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7983440277002384213}
   - component: {fileID: 4576790021901358038}
-  - component: {fileID: 156147684836572100}
   m_Layer: 0
   m_Name: Canon
   m_TagString: Untagged
@@ -132,31 +131,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RestAngle: 9
   Angle: 45
+  MinAngle: 0
+  MaxAngle: 90
   TNT: 500
-  orbFactory: {fileID: 156147684836572100}
+  MinTNT: 100
+  MaxTNT: 2000
+  MinWind: -20
+  MaxWind: 20
   gun: {fileID: 1461416697330791043}
   muzzle: {fileID: 4129594114209715904}
---- !u!114 &156147684836572100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412110927296661166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440051edf711143369122b4ba6d59a7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OrbPrefab: {fileID: 8303151869097121814, guid: 6adac68d632b74d99919727a1d47bc8b, type: 3}
+  CanonBallPrefab: {fileID: 8303151869097121814, guid: 6adac68d632b74d99919727a1d47bc8b, type: 3}
   OrbSprites:
   - {fileID: -5064565881070278140, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
   - {fileID: -8002112293322884280, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
   - {fileID: -4402443056253057589, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
   - {fileID: -8691039756497507636, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
   - {fileID: 1798457457892198117, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
-  LaunchAngle: 0
-  TNT: 500
 --- !u!1 &5960953865582498170
 GameObject:
   m_ObjectHideFlags: 0
