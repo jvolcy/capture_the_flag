@@ -19,10 +19,12 @@ public class CanonCtrl : MonoBehaviour
 
     public CanonBall CanonBallPrefab;
     public Sprite[] OrbSprites;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         UpdateCanonOnScreen();
     }
 
@@ -34,6 +36,7 @@ public class CanonCtrl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("Fire");
             Fire();
         }
     }
@@ -52,6 +55,7 @@ public class CanonCtrl : MonoBehaviour
 
     public void Fire()
     {
+
         CanonBall canonBall;
         //Transform orbTransform = new Transform();
 

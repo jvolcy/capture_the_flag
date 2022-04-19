@@ -690,14 +690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
-      propertyPath: TNT
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
-      propertyPath: Angle
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5412110927296661166, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
       propertyPath: m_Name
       value: Canon
