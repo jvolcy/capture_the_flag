@@ -10,7 +10,7 @@ public class Orb : MonoBehaviour
     public float Angle = 45f;
     public float Force = 1000f;
 
-    public float OrbLife = 10.0f;
+    //public float OrbLife = 10.0f;
     //public Sprite RedOrb;
     //public Sprite GreenOrb;
 
@@ -19,7 +19,7 @@ public class Orb : MonoBehaviour
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector3(Force * Mathf.Cos(Angle * Mathf.Deg2Rad), Force * Mathf.Sin(Angle * Mathf.Deg2Rad), 0f));
-        Destroy(gameObject, OrbLife);
+        //Destroy(gameObject, OrbLife);
     }
 
     // Update is called once per frame
@@ -27,8 +27,4 @@ public class Orb : MonoBehaviour
     {
     }
 
-    public static explicit operator Orb(GameObject v)
-    {
-        throw new NotImplementedException();
-    }
 }

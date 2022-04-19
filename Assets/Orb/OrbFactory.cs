@@ -18,7 +18,7 @@ public class OrbFactory : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (Time.frameCount % 100 == 0)
         {
             Orb orb;
@@ -35,6 +35,26 @@ public class OrbFactory : MonoBehaviour
             SpriteRenderer spriteRenderer = orb.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = OrbSprites[Random.Range(0, OrbSprites.Length)];
         }
-        
+        */
+    }
+
+
+    // Update is called once per frame
+    public void Fire()
+    {
+        Orb orb;
+        //Transform orbTransform = new Transform();
+
+        //orbTransform.position = new Vector3(0f, 6f, 0f);
+
+        orb = Instantiate(OrbPrefab, null);
+        orb.transform.position = muzzle.position;
+        //orb.transform.rotation = Quaternion.Euler(0f, 0f, LaunchAngle);
+        orb.Angle = LaunchAngle;
+        orb.Force = TNT;
+
+        SpriteRenderer spriteRenderer = orb.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = OrbSprites[Random.Range(0, OrbSprites.Length)];
+
     }
 }

@@ -24,12 +24,17 @@ public class CanonCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        orbFactory.TNT = TNT;
         if (Angle != mAngle)
         {
             mAngle = Angle;
             orbFactory.LaunchAngle = mAngle;
             UpdateCanonOnScreen();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            orbFactory.TNT = TNT;
+            orbFactory.Fire();
         }
     }
 

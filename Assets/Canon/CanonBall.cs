@@ -32,7 +32,7 @@ public class CanonBall : MonoBehaviour
 
             orbScript.Force = Random.Range(MinFiringForce, MaxFiringForce);
             orbScript.Angle = CanonAngle;
-            orbScript.OrbLife = CanonBallLife;
+            //orbScript.OrbLife = CanonBallLife;
 
             SpriteRenderer spriteRenderer = orb.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = OrbSprites[Random.Range(0, OrbSprites.Length)];
