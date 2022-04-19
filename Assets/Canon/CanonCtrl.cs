@@ -6,11 +6,17 @@ public class CanonCtrl : MonoBehaviour
 {
     public float RestAngle = 9f;
     public float Angle;
-    public float TNT = 500f;
     private float mAngle;
+    public float MinAngle = 0f;     //tbi
+    public float MaxAngle = 90f;    //tbi
+    public float TNT = 500f;
+    public float MinTNT = 100f;     //tbi
+    public float MaxTNT = 2000f;    //tbi
+    public float MinWind = -20f;    //tbi
+    public float MaxWind = 20f;     //tbi
     public OrbFactory orbFactory;
     public GameObject gun;
-    public Transform muzzle;
+    public Transform muzzle;    //transform of the canon's muzzle
 
     // Start is called before the first frame update
     void Start()
