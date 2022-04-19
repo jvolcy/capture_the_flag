@@ -690,6 +690,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: OrbPrefab
+      value: 
+      objectReference: {fileID: 8303151869097121814, guid: 6adac68d632b74d99919727a1d47bc8b, type: 3}
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: OrbSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: OrbSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -5064565881070278140, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: OrbSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -8002112293322884280, guid: b626b521e1c9b4bdaaaaa26a2c83a4b7, type: 3}
     - target: {fileID: 5412110927296661166, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
       propertyPath: m_Name
       value: Canon

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbFactory : MonoBehaviour
+public class xOrbFactory : MonoBehaviour
 {
-    public Orb OrbPrefab;
+    public CanonBall OrbPrefab;
     public Sprite[] OrbSprites;
     public float LaunchAngle = 0f;
     public Transform muzzle;
@@ -40,9 +40,9 @@ public class OrbFactory : MonoBehaviour
 
 
     // Update is called once per frame
-    public void Fire()
+    public void xFire()
     {
-        Orb orb;
+        CanonBall orb;
         //Transform orbTransform = new Transform();
 
         //orbTransform.position = new Vector3(0f, 6f, 0f);

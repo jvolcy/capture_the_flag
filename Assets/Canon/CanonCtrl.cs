@@ -14,16 +14,19 @@ public class CanonCtrl : MonoBehaviour
     public float MaxTNT = 2000f;    //tbi
     public float MinWind = -20f;    //tbi
     public float MaxWind = 20f;     //tbi
-    public OrbFactory orbFactory;
+    //public OrbFactory orbFactory;
     public GameObject gun;
     public Transform muzzle;    //transform of the canon's muzzle
+
+    public CanonBall OrbPrefab;
+    public Sprite[] OrbSprites;
 
     // Start is called before the first frame update
     void Start()
     {
         mAngle = Angle;
-        orbFactory.LaunchAngle = mAngle;
-        orbFactory.muzzle = muzzle;
+        //orbFactory.LaunchAngle = mAngle;
+        //orbFactory.muzzle = muzzle;
         UpdateCanonOnScreen();
     }
 
@@ -33,14 +36,14 @@ public class CanonCtrl : MonoBehaviour
         if (Angle != mAngle)
         {
             mAngle = Angle;
-            orbFactory.LaunchAngle = mAngle;
+            //orbFactory.LaunchAngle = mAngle;
             UpdateCanonOnScreen();
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            orbFactory.TNT = TNT;
-            orbFactory.Fire();
+            //orbFactory.TNT = TNT;
+            Fire();
         }
     }
 
@@ -50,4 +53,22 @@ public class CanonCtrl : MonoBehaviour
         gun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, (RestAngle - mAngle) * Mathf.Sign(transform.localScale.x)));
     }
 
+
+    public void Fire()
+    {
+        CanonBall orb;
+        //Transform orbTransform = new Transform();
+
+        //orbTransform.position = new Vector3(0f, 6f, 0f);
+
+        orb = Instantiate(OrbPrefab, null);
+        orb.transform.position = muzzle.position;
+        //orb.transform.rotation = Quaternion.Euler(0f, 0f, LaunchAngle);
+        orb.Angle = mAngle;
+        orb.Force = TNT;
+
+        SpriteRenderer spriteRenderer = orb.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = OrbSprites[Random.Range(0, OrbSprites.Length)];
+
+    }
 }

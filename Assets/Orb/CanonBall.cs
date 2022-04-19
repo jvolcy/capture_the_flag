@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Orb : MonoBehaviour
+public class CanonBall : MonoBehaviour
 {
     //public float StartY = 6.0f;
     //public float StartX = 0f;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanonBall : MonoBehaviour
+public class xCanonBall : MonoBehaviour
 {
     public GameObject OrbPrefab;
     public Sprite[] OrbSprites;
@@ -17,7 +17,7 @@ public class CanonBall : MonoBehaviour
     {
 
     }
-
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +26,7 @@ public class CanonBall : MonoBehaviour
             GameObject orb;
 
             orb = Instantiate(OrbPrefab, transform.position, new Quaternion());
-            Orb orbScript = orb.GetComponent<Orb>();
+            //Orb orbScript = orb.GetComponent<Orb>();
 
             orb.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
 
@@ -39,4 +39,5 @@ public class CanonBall : MonoBehaviour
         }
         
     }
+    */
 }
