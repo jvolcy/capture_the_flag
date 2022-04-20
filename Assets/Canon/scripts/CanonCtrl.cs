@@ -7,13 +7,8 @@ public class CanonCtrl : MonoBehaviour
     public float RestAngle = 9f;
     public float Angle = 0f;
     private float prevAngle = 0f;
-    public float MinAngle = 0f;     //tbi
-    public float MaxAngle = 90f;    //tbi
     public float TNT = 500f;
-    public float MinTNT = 100f;     //tbi
-    public float MaxTNT = 2000f;    //tbi
-    public float MinWind = -20f;    //tbi
-    public float MaxWind = 20f;     //tbi
+
     public GameObject gun;
     public Transform muzzle;    //transform of the canon's muzzle
 
@@ -29,6 +24,7 @@ public class CanonCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*
     void Update()
     {
 
@@ -40,9 +36,10 @@ public class CanonCtrl : MonoBehaviour
             Fire();
         }
     }
+    */
 
     // Update canon angle on screen
-    void UpdateCanonOnScreen()
+    public void UpdateCanonOnScreen()
     {
         if (Angle != prevAngle)
         {
